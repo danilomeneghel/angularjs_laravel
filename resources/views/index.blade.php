@@ -3,6 +3,7 @@
 <head>
 	<title>Cadastro de Pessoas</title>
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 
 	<script type="text/javascript" src="assets/jquery/jquery.js"></script>
 	<script type="text/javascript" src="assets/bootstrap/dist/js/bootstrap.js"></script>
@@ -11,10 +12,10 @@
 	<script type="text/javascript" src="assets/angular/angular.js"></script>
 
 	<!-- App -->
-	<script type="text/javascript" src="assets/angular/app.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
 
 	<!-- Pagination -->
-	<script type="text/javascript" src="assets/angular/pagination.js"></script>
+	<script type="text/javascript" src="app/pagination.js"></script>
 </head>
 <body ng-controller="pessoaController">
 	<div class="container" ng-init="listar()">
@@ -25,12 +26,14 @@
 		</div>
 		<hr>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Nova Pessoa</button>
 			</div>
-			<div class="col-md-6 input-group">
-				<input class="form-control" ng-model="pesquisar">
-				<span class="input-group-addon">Pesquisar</span>
+			<div class="col-md-5">
+				<div class="inner-addon left-addon">
+				    <i class="glyphicon glyphicon-search"></i>
+				    <input type="text" class="form-control" placeholder="Pesquisar" ng-model="pesquisar" />
+				</div>
 			</div>
 		</div>
 		<hr>
