@@ -44,9 +44,11 @@ mysql> create database `angularjs_laravel`;
 
 ```
 
-Back to terminal and run Artisan:
+Back to terminal, check if the .env file has the correct data to connect to the database and run Artisan:
 
 ```artisan
+
+$ php artisan key:generate
 
 $ php artisan migrate
 
