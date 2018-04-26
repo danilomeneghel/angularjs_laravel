@@ -10,8 +10,7 @@ class Pessoas extends Seeder
      */
     public function run()
     {
-    	DB::statement("TRUNCATE TABLE pessoas CASCADE");
-        
+       
         $data = [
             [
                 'nome'=>'joao',
