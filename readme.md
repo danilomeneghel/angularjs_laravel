@@ -52,7 +52,7 @@ $ php artisan key:generate
 
 $ php artisan migrate
 
-$ php artisan seed
+$ php artisan db:seed
 
 ```
 

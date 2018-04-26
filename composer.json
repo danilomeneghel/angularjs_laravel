@@ -1,6 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
+    "name": "AngularJS and Laravel",
+    "description": "Laravel Framework 5 and AngularJS 1.5",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
@@ -29,12 +29,6 @@
         ]
     },
     "scripts": {
-        "post-root-package-install": [
-            "php -r \"copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "php artisan key:generate"
-        ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize"
