@@ -2,19 +2,19 @@
 <html ng-app="cdg">
 <head>
 	<title>Cadastro de Pessoas</title>
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/dist/css/bootstrap.css">
 
-	<script type="text/javascript" src="node_modules/jquery/jquery.js"></script>
-	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="assets/jquery/jquery.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/dist/js/bootstrap.js"></script>
 
 	<!-- Angular -->
-	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
-	
+	<script type="text/javascript" src="assets/angular/angular.js"></script>
+
 	<!-- App -->
-	<script type="text/javascript" src="app/app.js"></script>
-	
+	<script type="text/javascript" src="assets/angular/app.js"></script>
+
 	<!-- Pagination -->
-	<script type="text/javascript" src="app/pagination.js"></script>
+	<script type="text/javascript" src="assets/angular/pagination.js"></script>
 </head>
 <body ng-controller="pessoaController">
 	<div class="container" ng-init="listar()">
@@ -57,7 +57,7 @@
 						</tr>
 					</tbody>
 				</table>
-				
+
 				<div class="pull-right">
 					<pagination></pagination>
 				</div>
