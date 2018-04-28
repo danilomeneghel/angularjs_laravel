@@ -66,7 +66,12 @@ $ php artisan serve
 
 Finally open `http://localhost:8000/` in your browser.
 
-
 ## License
 
-MIT
+Laravel Admin is licensed under <a href="license.md">The MIT License (MIT)</a>.
+
+## Screenshots
+
+![Screenshots](screenshots/screenshot01.png)<br><br>
+![Screenshots](screenshots/screenshot02.png)<br><br>
+![Screenshots](screenshots/screenshot03.png)<br><br>

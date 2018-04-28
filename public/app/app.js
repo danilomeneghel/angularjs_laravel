@@ -44,31 +44,38 @@ app.controller('pessoaController', function($scope, $http, pessoaService) {
 		  // Pagination Range
 		  var pages = [];
 
-		  for(var i=1;i<=response.last_page;i++) {          
+		  for(var i=1;i<=response.last_page;i++) {
 			pages.push(i);
 		  }
 
 		  $scope.range = pages;
 		});
 	};
-	
+
+  $scope.cadastrar = function(){
+    $scope.pessoa = null;
+    $('#modalTitle').html('Cadastrar Pessoa');
+    $('#modal').modal('show');
+  }
+
 	$scope.editar = function(data){
 		$scope.pessoa = data;
-		$('#myModal').modal('show');
+    $('#modalTitle').html('Editar Pessoa');
+		$('#modal').modal('show');
 	}
 
 	$scope.salvar = function(){
 		if($scope.pessoa.id){
 			pessoaService.edita($scope.pessoa).success(function(res){
 				$scope.listar();
-				$('#myModal').modal('hide');
 			});
 		}else{
 			pessoaService.cadastra($scope.pessoa).success(function(res){
 				$scope.listar();
-				$('#myModal').modal('hide');
 			});
 		}
+    $scope.pessoa = null;
+    $('#modal').modal('hide');
 	}
 
 	$scope.excluir = function(data){
