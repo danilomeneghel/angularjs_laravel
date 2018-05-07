@@ -68,7 +68,7 @@ Finally open `http://localhost:8000/` in your browser.
 
 ## License
 
-Laravel Admin is licensed under <a href="license.md">The MIT License (MIT)</a>.
+Laravel Admin is licensed under <a href="LICENSE">The MIT License (MIT)</a>.
 
 ## Screenshots
 
