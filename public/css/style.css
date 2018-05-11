@@ -63,6 +63,29 @@
 .btn-twitter.active,.btn-twitter:active,.open>.dropdown-toggle.btn-twitter{background-image:none}
 .btn-twitter .badge{color:#55acee;background-color:#fff}
 
+.panel-default {
+	padding: 15px;
+}
+
+.pag-left {
+	display: block;
+	width: 50%;
+	float: left;
+	text-align:left;
+	padding-left: 15px;
+	padding-top: 12px;
+	height: 50px;
+}
+.pag-right {
+	display: block;
+	width: 50%;
+	float: right;
+	text-align:right;
+	padding-right: 15px;
+	margin-top: -15px;
+	height: 50px;
+}
+
 /* enable absolute positioning */
 .inner-addon {
   position: relative;

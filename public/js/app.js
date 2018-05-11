@@ -40,6 +40,7 @@ app.controller('pessoaController', function($scope, $http, pessoaService) {
 		  $scope.pessoas      = response.data;
 		  $scope.totalPages   = response.last_page;
 		  $scope.currentPage  = response.current_page;
+		  $scope.total 		  = response.total;
 
 		  // Pagination Range
 		  var pages = [];

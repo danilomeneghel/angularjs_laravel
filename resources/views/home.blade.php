@@ -8,44 +8,50 @@
 				<h1>Cadastro de Pessoas</h1>
 			</div>
 		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-7">
-				<button type="button" class="btn btn-primary" ng-click="cadastrar()">Nova Pessoa</button>
-			</div>
-			<div class="col-md-5">
-				<div class="inner-addon left-addon">
-				    <i class="fa fa-search"></i>
-				    <input type="text" class="form-control" placeholder="Pesquisar" ng-model="pesquisar" />
+		<div class="panel panel-default">
+			<div class="row">
+				<div class="col-md-7">
+					<button type="button" class="btn btn-primary" ng-click="cadastrar()">Nova Pessoa</button>
+				</div>
+				<div class="col-md-5">
+					<div class="inner-addon left-addon">
+						<i class="fa fa-search"></i>
+						<input type="text" class="form-control" placeholder="Pesquisar" ng-model="pesquisar" />
+					</div>
 				</div>
 			</div>
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-md-12">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>#</th>
-							<th>Nome</th>
-							<th>E-mail</th>
-							<th width="120">Ação</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="pessoa in pessoas | filter: pesquisar">
-							<td><%pessoa.id%></td>
-							<td><%pessoa.nome%></td>
-							<td><%pessoa.email%></td>
-							<td>
-								<button class="btn btn-info btn-xs" ng-click="editar(pessoa)">Editar</button>
-								<button class="btn btn-danger btn-xs" ng-click="excluir(pessoa)">Excluir</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="pull-right">
-					<pagination></pagination>
+			<hr>
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Nome</th>
+								<th>E-mail</th>
+								<th width="120">Ação</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="pessoa in pessoas | filter: pesquisar">
+								<td><%pessoa.id%></td>
+								<td><%pessoa.nome%></td>
+								<td><%pessoa.email%></td>
+								<td>
+									<button class="btn btn-info btn-xs" ng-click="editar(pessoa)">Editar</button>
+									<button class="btn btn-danger btn-xs" ng-click="excluir(pessoa)">Excluir</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="row">
+						<div class="pag-left">
+							Total de Registros: <%total%>
+						</div>
+						<div class="pag-right">
+							<pagination></pagination>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
