@@ -26,7 +26,7 @@ Project of an CRUD developed with the Laravel Framework 5 and AngularJS 1.5.
 
 ## Installation
 
-shell```
+```
 $ git clone https://github.com/danilomeneghel/angularjs_laravel.git
 
 $ cd angularjs_laravel
@@ -37,7 +37,7 @@ $ composer install
 Then create a database with name angularjs_laravel in your mysql.
 Then run the following commands:
 
-mysql```
+```
 $ mysql -u <your user> -p <your password>
 
 mysql> create database `angularjs_laravel`;
@@ -45,7 +45,7 @@ mysql> create database `angularjs_laravel`;
 
 Back to terminal, check if the .env file has the correct data to connect to the database and run Artisan:
 
-artisan```
+```
 $ php artisan key:generate
 
 $ php artisan migrate
@@ -55,7 +55,7 @@ $ php artisan db:seed
 
 After everything is done, run the project:
 
-artisan```
+```
 $ php artisan serve
 ```
 
@@ -65,7 +65,7 @@ Finally open http://localhost:8000/ in your browser.
 
 To set up login with social networks, follow the steps below:
 
-social```
+```
 FB_ID=app-id-here
 FB_SECRET=app-secret-here
 
