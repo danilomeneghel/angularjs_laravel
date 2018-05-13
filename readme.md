@@ -7,18 +7,24 @@ Project of an CRUD developed with the Laravel Framework 5 and AngularJS 1.5.
 - OAuth
 - Login with E-mail, Google, Facebook, Twitter or GitHub
 - Routes
-- CRUD
-- Grid View
+- API CRUD
 - Filter
 - Pagination
 - View Blade
 
+## Requirements
+
+- PHP >= 5.5.9
+- MySql >=5
+- Composer
+
 ## Tecnologies
 
-- PHP 7
+- PHP
 - JS
 - Jquery
 - Json
+- AngularJS
 - CSS and SCSS
 - Bootstrap
 - Composer

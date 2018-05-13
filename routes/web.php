@@ -17,8 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 // Social Auth
 Route::get('auth/social', 'Auth\SocialAuthController@show')->name('social.login');
 Route::get('oauth/{driver}', 'Auth\SocialAuthController@redirectToProvider')->name('social.oauth');
@@ -26,7 +24,7 @@ Route::get('oauth/{driver}/callback', 'Auth\SocialAuthController@handleProviderC
 
 // Routes after Auth
 Route::middleware(['auth'])->group(function () {
-	Route::get('/cadastro', function () {
-		return view('/cadastro');
+	Route::get('/home', function () {
+		return view('/home');
 	});
 });

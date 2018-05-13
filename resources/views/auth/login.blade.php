@@ -84,7 +84,7 @@
 								<div class="row" style="padding:8px 0px">
 								  <div class="col-xs-6">
 									<div class="pull-left">
-									  <a ui-sref="forgot_password" href="{{ route('password.request') }}">Forgot your password?</a>
+									  <a ui-sref="forgot_password" href="{{ route('password.request') }}">Forgot password?</a>
 									</div>
 								  </div>
 								  <div class="col-xs-6">
