@@ -14,6 +14,7 @@ Project of an CRUD developed with the Laravel Framework 5 and AngularJS 1.5.
 
 ## Requirements
 
+- Apache
 - PHP >= 5.5.9
 - MySql >=5
 - Composer
@@ -89,7 +90,7 @@ Make sure you set correct redirect url in dev console of providers. It should be
 
 ## License
 
-Laravel Admin is licensed under <a href="license.md">The MIT License (MIT)</a>.
+Laravel Admin is licensed under <a href="LICENSE">The MIT License (MIT)</a>.
 
 ## Screenshots
 
