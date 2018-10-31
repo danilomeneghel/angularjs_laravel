@@ -1,6 +1,6 @@
 # Laravel AngularJS
 
-Project of an CRUD developed with the Laravel Framework 5 and AngularJS 1.5.
+Project developed with the Laravel Framework 5 and AngularJS 1.5.
 
 ## Features
 
