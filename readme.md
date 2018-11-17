@@ -89,6 +89,14 @@ GH_SECRET=app-secret-here
 
 Make sure you set correct redirect url in dev console of providers. It should be like `env('APP_URL') . '/oauth/twitter/callback'` format. 
 
+## Demonstration
+
+https://angularjs-laravel.herokuapp.com/ <br>
+
+- Login
+	- Email: admin@admin.com
+	- Password: admin123
+
 ## License
 
 Laravel Admin is licensed under <a href="LICENSE">The MIT License (MIT)</a>.
