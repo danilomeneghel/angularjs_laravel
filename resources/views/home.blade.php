@@ -33,7 +33,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr ng-repeat="pessoa in pessoas | filter: pesquisar">
+							<tr ng-repeat="pessoa in filterData = (pessoas | filter: pesquisar) | limitTo: 5:5*(page-1)">
 								<td><%pessoa.id%></td>
 								<td><%pessoa.nome%></td>
 								<td><%pessoa.email%></td>
@@ -46,10 +46,11 @@
 					</table>
 					<div class="row">
 						<div class="pag-left">
-							Total de Registros: <%total%>
+							Total de Registros: <%filterData.length%>
 						</div>
 						<div class="pag-right">
-							<pagination></pagination>
+							<uib-pagination class="pagination-sm pagination" total-items="filterData.length" ng-model="page"
+											previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=5></uib-pagination>
 						</div>
 					</div>
 				</div>

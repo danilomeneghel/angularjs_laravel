@@ -85,6 +85,7 @@
 	
 	<!-- Angular -->
 	<script type="text/javascript" src="{{ asset('angular/angular.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('angular/angular-ui-bootstrap-tpls.js') }}"></script>
 
 	<!-- App -->
 	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>

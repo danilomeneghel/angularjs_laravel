@@ -12,9 +12,7 @@ class PessoaController extends Controller
 	// Listando pessoas
     public function lista()
     {
-    	$pessoas = Pessoas::paginate(5);
-		
-        return $pessoas;
+    	return Pessoas::all();
     }
 
     // Cadastrando Pessoa

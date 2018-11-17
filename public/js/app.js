@@ -1,5 +1,7 @@
 'use strict';
-var app = angular.module('cdg',[]);
+
+var app = angular.module('cdg',['ui.bootstrap']);
+var url_base = window.location.href;
 
 app.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('<%');
@@ -10,46 +12,27 @@ app.config(function($interpolateProvider) {
 app.factory('pessoaService',function($http) {
 	return {
 		lista: function(){
-			return $http.get('/api/pessoas');
+			return $http.get(url_base+'/../api/pessoas');
 		},
 		cadastra: function(data){
-			return $http.post('/api/pessoas', data);
+			return $http.post(url_base+'/../api/pessoas', data);
 		},
 		edita: function(data){
 			var id = data.id;
 			delete data.id;
-			return $http.put('/api/pessoa/'+id, data);
+			return $http.put(url_base+'/../api/pessoa/'+id, data);
 		},
 		exclui: function(id){
-			return $http.delete('/api/pessoa/'+id)
+			return $http.delete(url_base+'/../api/pessoa/'+id)
 		}
 	}
 });
 
 // Controller
 app.controller('pessoaController', function($scope, $http, pessoaService) {
-	$scope.totalPages = 0;
-	$scope.currentPage = 1;
-	$scope.range = [];
-
-	$scope.listar = function(pageNumber){
-		if(pageNumber===undefined){
-		  pageNumber = '1';
-		}
-		$http.get('/api/pessoas?page='+pageNumber).success(function(response) {
-		  $scope.pessoas      = response.data;
-		  $scope.totalPages   = response.last_page;
-		  $scope.currentPage  = response.current_page;
-		  $scope.total 		  = response.total;
-
-		  // Pagination Range
-		  var pages = [];
-
-		  for(var i=1;i<=response.last_page;i++) {
-			pages.push(i);
-		  }
-
-		  $scope.range = pages;
+	$scope.listar = function(){
+		pessoaService.lista().success(function(res){
+			$scope.pessoas = res;
 		});
 	};
 
@@ -61,7 +44,7 @@ app.controller('pessoaController', function($scope, $http, pessoaService) {
 
 	$scope.editar = function(data){
 		$scope.pessoa = data;
-    $('#modalTitle').html('Editar Pessoa');
+		$('#modalTitle').html('Editar Pessoa');
 		$('#modal').modal('show');
 	}
 
@@ -75,8 +58,9 @@ app.controller('pessoaController', function($scope, $http, pessoaService) {
 				$scope.listar();
 			});
 		}
-    $scope.pessoa = null;
-    $('#modal').modal('hide');
+
+		$scope.pessoa = null;
+		$('#modal').modal('hide');
 	}
 
 	$scope.excluir = function(data){
