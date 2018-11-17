@@ -11,6 +11,7 @@ Project developed with the Laravel Framework 5 and AngularJS 1.5.
 - Filter
 - Pagination
 - View Blade
+- Responsive
 
 ## Requirements
 
@@ -99,3 +100,4 @@ Laravel Admin is licensed under <a href="LICENSE">The MIT License (MIT)</a>.
 ![Screenshots](screenshots/screenshot03.png)<br><br>
 ![Screenshots](screenshots/screenshot04.png)<br><br>
 ![Screenshots](screenshots/screenshot05.png)<br><br>
+![Screenshots](screenshots/screenshot06.png)<br><br>

@@ -67,7 +67,7 @@
 	padding: 15px;
 }
 
-.pag-left {
+.pagination-left {
 	display: block;
 	width: 50%;
 	float: left;
@@ -76,7 +76,7 @@
 	padding-top: 12px;
 	height: 50px;
 }
-.pag-right {
+.pagination-right {
 	display: block;
 	width: 50%;
 	float: right;
@@ -89,6 +89,7 @@
 /* enable absolute positioning */
 .inner-addon {
   position: relative;
+  margin-top: 10px;
 }
 
 /* style fa */

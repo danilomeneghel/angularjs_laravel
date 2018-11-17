@@ -5,7 +5,7 @@
 	<div class="container" ng-init="listar()">
 		<div class="row">
 			<div class="col-md-12">
-				<h1>Cadastro de Pessoas</h1>
+				<h2>Cadastro de Pessoas</h2>
 			</div>
 		</div>
 		<div class="panel panel-default">
@@ -45,10 +45,10 @@
 						</tbody>
 					</table>
 					<div class="row">
-						<div class="pag-left">
+						<div class="pagination-left">
 							Total de Registros: <%filterData.length%>
 						</div>
-						<div class="pag-right">
+						<div class="pagination-right">
 							<uib-pagination class="pagination-sm pagination" total-items="filterData.length" ng-model="page"
 											previous-text="&lsaquo;" next-text="&rsaquo;" items-per-page=5></uib-pagination>
 						</div>
