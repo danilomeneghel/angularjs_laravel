@@ -91,7 +91,7 @@ Make sure you set correct redirect url in dev console of providers. It should be
 
 ## Demonstration
 
-https://angularjs-laravel.herokuapp.com/ <br>
+http://angularjs-laravel.herokuapp.com/ <br>
 
 - Login
 	- Email: admin@admin.com
