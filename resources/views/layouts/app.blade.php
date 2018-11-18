@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-	
+
 	<!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 
@@ -32,7 +32,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/home') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -47,8 +47,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('/login') }}">Login</a></li>
+                            <li><a href="{{ route('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -57,17 +57,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
+                  								  <li><a href="{{ url('/profile') }}">Perfil</a></li>
+                  								  <li><a href="{{ url('/logout') }}">Sair</a></li>
                                 </ul>
                             </li>
                         @endif
@@ -82,7 +73,7 @@
     <!-- Scripts -->
 	<script type="text/javascript" src="{{ asset('jquery/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('bootstrap/dist/js/bootstrap.js') }}"></script>
-	
+
 	<!-- Angular -->
 	<script type="text/javascript" src="{{ asset('angular/angular.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('angular/angular-ui-bootstrap-tpls.js') }}"></script>
