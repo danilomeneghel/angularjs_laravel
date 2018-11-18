@@ -21,7 +21,7 @@
 					<div class="panel panel-default">
 						<div class="panel-body">
 							<div class="panel-heading text-center"><h3>Sign in</h3></div>
-							
+
 							<form class="form-horizontal" method="POST" action="{{ route('login') }}">
 								{{ csrf_field() }}
 
@@ -48,17 +48,17 @@
 										@endif
 									</div>
 								</div>
-								
+
 								<div class="row">
 									<div class="panel-heading col-xs-12">
 									  <button type="submit" class="btn btn-primary btn-block btn-flat">
-										Sign In
+										Login
 									  </button>
 									</div>
 								</div>
 
 								<div class="text-center">- OR -</div>
-								
+
 								<div class="social-auth-links text-center">
 									<a href="{{ route('social.oauth', 'facebook') }}" class="btn btn-block btn-social btn-facebook btn-flat">
 										<i class="fa fa-facebook"></i>
@@ -80,7 +80,7 @@
 										Login with Github
 									</a>
 								</div>
-								
+
 								<div class="row" style="padding:8px 0px">
 								  <div class="col-xs-6">
 									<div class="pull-left">
