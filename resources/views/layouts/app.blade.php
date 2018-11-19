@@ -10,12 +10,12 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-	<!-- Font Awesome -->
-    <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+	   <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{ secure_asset('css/font-awesome.min.css') }}">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 </head>
 <body>
     <div id="app">
@@ -64,17 +64,14 @@
     </div>
 
     <!-- Scripts -->
-	<script type="text/javascript" src="{{ asset('jquery/jquery.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bootstrap/dist/js/bootstrap.js') }}"></script>
+  	<script type="text/javascript" src="{{ asset('jquery/jquery.js') }}"></script>
+  	<script type="text/javascript" src="{{ asset('bootstrap/dist/js/bootstrap.js') }}"></script>
 
-	<!-- Angular -->
-	<script type="text/javascript" src="{{ asset('angular/angular.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('angular/angular-ui-bootstrap-tpls.js') }}"></script>
+  	<!-- AngularJS -->
+  	<script type="text/javascript" src="{{ asset('angular/angular.js') }}"></script>
+  	<script type="text/javascript" src="{{ asset('angular/angular-ui-bootstrap-tpls.js') }}"></script>
 
-	<!-- App -->
-	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
-
-	<!-- Pagination -->
-	<script type="text/javascript" src="{{ asset('js/pagination.js') }}"></script>
+  	<!-- App -->
+  	<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
