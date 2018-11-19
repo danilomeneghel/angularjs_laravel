@@ -15,7 +15,7 @@ app.factory('pessoaService',function($http) {
 			return $http.get(url_base+'/../api/pessoas');
 		},
 		cadastra: function(data){
-			return $http.post(url_base+'/../api/pessoas', data);
+			return $http.post(url_base+'/../api/pessoa', data);
 		},
 		edita: function(data){
 			var id = data.id;

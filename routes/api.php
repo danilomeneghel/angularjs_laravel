@@ -17,8 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Cadastro
+// Pessoas
 Route::get('pessoas', 'PessoaController@lista');
-Route::post('pessoas', 'PessoaController@novo');
+Route::post('pessoa', 'PessoaController@novo');
 Route::put('pessoa/{id}', 'PessoaController@editar');
 Route::delete('pessoa/{id}', 'PessoaController@excluir');
